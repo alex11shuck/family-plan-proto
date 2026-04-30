@@ -14,7 +14,7 @@ export function PrototypeHome() {
         <div className="grid gap-[24px]">
           {/* Option 1 */}
           <Link
-            to="/"
+            to="/option1"
             className="bg-white/10 backdrop-blur-sm rounded-[16px] p-[24px] border-2 border-white/20 hover:border-[#05c3f9] transition-all"
           >
             <div className="flex items-start gap-[16px]">
