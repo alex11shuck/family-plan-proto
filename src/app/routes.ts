@@ -17,75 +17,80 @@ import { AndroidEmail } from "./components/option3/AndroidEmail";
 import { AndroidRedemption } from "./components/option3/AndroidRedemption";
 import { AndroidPremium } from "./components/option3/AndroidPremium";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: Layout,
+      children: [
+        {
+          index: true,
+          Component: PrototypeHome,
+        },
+        {
+          path: "option1",
+          Component: Paywall,
+        },
+        {
+          path: "post-purchase",
+          Component: PostPurchase,
+        },
+        {
+          path: "invite",
+          Component: InviteFlow,
+        },
+        {
+          path: "seat-management",
+          Component: SeatManagement,
+        },
+        {
+          path: "redeem",
+          Component: RedemptionFlow,
+        },
+        {
+          path: "premium",
+          Component: PremiumTab,
+        },
+        {
+          path: "option2",
+          Component: PaywallOption2,
+        },
+        {
+          path: "option2/post-purchase",
+          Component: PostPurchaseOption2,
+        },
+        {
+          path: "option2/premium",
+          Component: PremiumTabOption2,
+        },
+        {
+          path: "option3",
+          Component: PaywallOption3,
+        },
+        {
+          path: "option3/post-purchase",
+          Component: PostPurchaseOption3,
+        },
+        {
+          path: "option3/premium",
+          Component: PremiumTabOption3,
+        },
+        {
+          path: "option3/android-email",
+          Component: AndroidEmail,
+        },
+        {
+          path: "option3/android-redemption",
+          Component: AndroidRedemption,
+        },
+        {
+          path: "option3/android-premium",
+          Component: AndroidPremium,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    Component: Layout,
-    children: [
-      {
-        index: true,
-        Component: PrototypeHome,
-      },
-      {
-        path: "option1",
-        Component: Paywall,
-      },
-      {
-        path: "post-purchase",
-        Component: PostPurchase,
-      },
-      {
-        path: "invite",
-        Component: InviteFlow,
-      },
-      {
-        path: "seat-management",
-        Component: SeatManagement,
-      },
-      {
-        path: "redeem",
-        Component: RedemptionFlow,
-      },
-      {
-        path: "premium",
-        Component: PremiumTab,
-      },
-      {
-        path: "option2",
-        Component: PaywallOption2,
-      },
-      {
-        path: "option2/post-purchase",
-        Component: PostPurchaseOption2,
-      },
-      {
-        path: "option2/premium",
-        Component: PremiumTabOption2,
-      },
-      {
-        path: "option3",
-        Component: PaywallOption3,
-      },
-      {
-        path: "option3/post-purchase",
-        Component: PostPurchaseOption3,
-      },
-      {
-        path: "option3/premium",
-        Component: PremiumTabOption3,
-      },
-      {
-        path: "option3/android-email",
-        Component: AndroidEmail,
-      },
-      {
-        path: "option3/android-redemption",
-        Component: AndroidRedemption,
-      },
-      {
-        path: "option3/android-premium",
-        Component: AndroidPremium,
-      },
-    ],
-  },
-]);
+    basename: import.meta.env.BASE_URL.replace(/\/$/, "") || "/",
+  }
+);
