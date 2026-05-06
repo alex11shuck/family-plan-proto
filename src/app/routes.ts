@@ -7,6 +7,9 @@ import { InviteFlow } from "./components/InviteFlow";
 import { SeatManagement } from "./components/SeatManagement";
 import { RedemptionFlow } from "./components/RedemptionFlow";
 import { PremiumTab } from "./components/PremiumTab";
+import { IndividualPurchaseConfirmation } from "./components/IndividualPurchaseConfirmation";
+import { FamilyUpsell } from "./components/FamilyUpsell";
+import { FamilyUpsellConfirmation } from "./components/FamilyUpsellConfirmation";
 import { PaywallOption2 } from "./components/option2/PaywallOption2";
 import { PostPurchaseOption2 } from "./components/option2/PostPurchaseOption2";
 import { PremiumTabOption2 } from "./components/option2/PremiumTabOption2";
@@ -50,6 +53,18 @@ export const router = createBrowserRouter(
         {
           path: "premium",
           Component: PremiumTab,
+        },
+        {
+          path: "individual-confirmation",
+          Component: IndividualPurchaseConfirmation,
+        },
+        {
+          path: "family-upsell",
+          Component: FamilyUpsell,
+        },
+        {
+          path: "family-upsell-confirmation",
+          Component: FamilyUpsellConfirmation,
         },
         {
           path: "option2",

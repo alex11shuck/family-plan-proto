@@ -167,7 +167,7 @@ export function Paywall() {
 
         {/* CTA Button */}
         <Link
-          to="/post-purchase"
+          to={selectedTier === "family" ? "/post-purchase" : "/individual-confirmation"}
           className="absolute left-[24px] top-[658px] w-[327px] h-[64px] flex items-center justify-center rounded-[4px] bg-[#05c3f9]"
         >
           <span className="font-['DIN_2014:Demi',sans-serif] text-[20px] leading-[28px] text-white">Start your FREE week</span>
