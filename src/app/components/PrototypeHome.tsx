@@ -35,6 +35,10 @@ export function PrototypeHome() {
                   </div>
                   <div className="flex items-center gap-[8px]">
                     <div className="size-[4px] rounded-full bg-[#05c3f9]"/>
+                    <p className="font-['DIN_OT:Regular',sans-serif] text-[14px] text-white/80">Individual → Family upsell flow</p>
+                  </div>
+                  <div className="flex items-center gap-[8px]">
+                    <div className="size-[4px] rounded-full bg-[#05c3f9]"/>
                     <p className="font-['DIN_OT:Regular',sans-serif] text-[14px] text-white/80">Post-purchase seat sharing</p>
                   </div>
                   <div className="flex items-center gap-[8px]">
